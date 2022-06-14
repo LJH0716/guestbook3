@@ -38,7 +38,7 @@
 				<td width="150px">${gList.name }</td>
 				<td width="300px">${gList.date }</td>
 				<td>
-					<a href="./gbc?action=deleteForm&no=${gList.no }">삭제</a>
+					<a href="/guestbook3/deleteForm?no=${gList.no }">삭제</a>
 				</td>
 			</tr>
 			<tr>
