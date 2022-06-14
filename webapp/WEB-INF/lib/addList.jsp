@@ -11,7 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/guestbook2/gbc" method="get">
+	<form action="/guestbook3/add" method="get">
 		<table border="1" width="510px">
 			<tr>
 				<td>이름</td><td>
@@ -31,7 +31,7 @@
 	</form>
 	<br/>
 
-	<c:forEach items="${gList}" var="gList">
+	<c:forEach items="${requestScope.guestList}" var="gList">
 		<table border="1">
 			<tr>
 				<td width="50px">${gList.no }</td>

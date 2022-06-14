@@ -8,18 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/guestbook3/delete" method="post">
-		<table>
-			<tr>
-				<td>비밀번호</td>
-				<td><input type="password" name="password"></td>
-				<td><button type="submit">삭제</button></td>
-				<td><a href="/guestbook2/gbc">메인으로 돌아가기</a></td>
-			</tr>
-		</table>
-		<input type='text' name="action" value="delete"><br>
-		<input type='hidden' name="no" value="${param.no}"><br>
+	<form action="/guestbook3/delete" method="get">
+		비밀번호 <input type="password" name="password" value=""> 
+		<button type="submit">확인</button><br>
+	<input type="hidden" name="no" value="${param.no}">
+	<a href="/guestbook3/addlist">메인으로 돌아가기</a>
 	</form>
-	<a href="/guestbook3/addList">메인으로 돌아가기</a>
+	
 </body>
 </html>
