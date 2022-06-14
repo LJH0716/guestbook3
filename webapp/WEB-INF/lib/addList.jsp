@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
 
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
 				<td colspan="4"><button type="submit">등록</button></td>
 			</tr>
 		</table>
-		<input type="text" name="action" value="add">
+		<input type="hidden" name="action" value="add">
 	</form>
 	<br/>
 
