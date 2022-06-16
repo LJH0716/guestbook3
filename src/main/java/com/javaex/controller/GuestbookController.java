@@ -2,6 +2,7 @@ package com.javaex.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,6 +16,8 @@ import com.javaex.vo.GuestbookVo;
 @Controller
 public class GuestbookController {
 	
+	@Autowired
+	private GuestbookDao guestbookDao; //--> =new GuestbookDao() 만들지 않고 주입시켜주라고 함, 제어권 X
 	
 	@RequestMapping(value="/addList", method= {RequestMethod.GET, RequestMethod.POST})
 	public String addList(Model model) {
@@ -26,7 +29,7 @@ public class GuestbookController {
 		
 		model.addAttribute("guestList", guestList);
 		
-		return "/WEB-INF/views/addList.jsp";
+		return "addList";
 	}
 
 	@RequestMapping(value="/add", method= {RequestMethod.GET, RequestMethod.POST})
@@ -44,7 +47,7 @@ public class GuestbookController {
 	public String deleteForm() {
 		System.out.println("guestController>deleteForm()");
 		
-		return "/WEB-INF/views/deleteForm.jsp";
+		return "deleteForm";
 	}
 	
 	@RequestMapping(value="/delete", method= {RequestMethod.GET, RequestMethod.POST})
