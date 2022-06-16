@@ -11,13 +11,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.javaex.dao.GuestbookDao;
+import com.javaex.service.GuestbookService;
 import com.javaex.vo.GuestbookVo;
 
 @Controller
 public class GuestbookController {
 	
 	@Autowired
-	private GuestbookDao guestbookDao; //--> =new GuestbookDao() 만들지 않고 주입시켜주라고 함, 제어권 X
+	private GuestbookService guestbookService;
 	
 	@RequestMapping(value="/addList", method= {RequestMethod.GET, RequestMethod.POST})
 	public String addList(Model model) {

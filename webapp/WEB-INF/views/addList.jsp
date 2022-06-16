@@ -17,7 +17,7 @@
 				<td>이름</td><td>
 				<input type="text" name="name"></td>
 				<td>비밀번호</td><td>
-				<input type="password" name="pass"></td>
+				<input type="password" name="password"></td>
 			</tr>
 			<tr>
 				<td colspan="4">
@@ -27,11 +27,11 @@
 				<td colspan="4"><button type="submit">등록</button></td>
 			</tr>
 		</table>
-		<input type="hidden" name="action" value="add">
+		
 	</form>
 	<br/>
 
-	<c:forEach items="${requestScope.guestList}" var="gList">
+	<c:forEach items="${guestList}" var="gList">
 		<table border="1">
 			<tr>
 				<td width="50px">${gList.no }</td>
